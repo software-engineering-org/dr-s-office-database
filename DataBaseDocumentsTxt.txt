@@ -1,0 +1,572 @@
+*SP_LOGIN*
+..........
+*Log in by your Account *
+..........
+*parameters*
+@ID in varchar(50)
+@PWD in varchar(50)
+
+******************************************************************
+
+*Create_Account*
+..........
+*Create Account*
+..........
+*parameters*
+@UserName in nvarchar(50)
+@Password in nvarchar(50)
+@Type in varchar(15)
+
+*******************************************************************
+
+*Register*
+..........
+*Create Account*
+..........
+*parameters*
+@UserName in nvarchar(50)
+@Password in nvarchar(50)
+@Type in varchar(15)
+
+*******************************************************************
+
+*Add_Person*
+..........
+*Create new person object*
+..........
+*parameters*
+@Name          type  nvarchar(50)
+@City          type  nvarchar(25)
+@Zip_code      type  int
+@Birthdate     type  date 
+@Phone         type  nvarchar(20)
+@E_mail        type  nvarchar(50)
+@Image         type  image
+@AdmissionDate type  date 
+@SSN           type  int 
+@AccountID     type  int
+
+******************************************************************
+
+*Search_Person*
+..........
+*Search for person *
+..........
+*parameters*
+@ID  type  int
+...........
+output All information about this Person
+
+******************************************************************
+
+*Update_Person*
+..........
+*Update data of this person *
+..........
+*parameters*
+@ID             type  int
+@Name           type nvarchar(50)
+@City           type nvarchar(25)
+@Zip_code       type int
+@Birthdate      type date 
+@Phone          type nvarchar(20)
+@E_mail         type nvarchar(50)
+@AdmissionDate  type date 
+@SSN            type int 
+@AccountID      type int
+...........
+
+******************************************************************
+
+*Add_Patient*
+..........
+*Create new Patient object *
+..........
+*parameters*
+@Name          type  nvarchar(50)
+@City          type  nvarchar(25)
+@Zip_code      type  int
+@Birthdate     type  date 
+@Phone         type  nvarchar(20)
+@E_mail        type  nvarchar(50)
+@Image         type  image
+@AdmissionDate type  date 
+@SSN           type  int 
+@AccountID     type  int
+...........
+
+******************************************************************
+
+*Search_Patient*
+..........
+*Search for Patient *
+..........
+*parameters*
+@ID   type  int
+...........
+output All information about this Person
+
+******************************************************************
+
+*Update_Patient*
+..........
+*update date of this Patient *
+..........
+*parameters*
+@PatientID   type  int
+@PersonID    type  int
+...........
+
+******************************************************************
+
+*Add_Rep*
+..........
+*Create new Patient object *
+..........
+*parameters*
+@Name          type  nvarchar(50)
+@City          type  nvarchar(25)
+@Zip_code      type  int
+@Birthdate     type  date 
+@Phone         type  nvarchar(20)
+@E_mail        type  nvarchar(50)
+@Image         type  image
+@AdmissionDate type  date 
+@SSN           type  int 
+@AccountID     type  int
+...........
+
+******************************************************************
+
+*Search_Rep*
+..........
+*Search for this Patient object *
+..........
+*parameters*
+@ID   type  int
+...........
+output All information about this Patient
+
+******************************************************************
+
+*Update_Rep*
+..........
+*update data of Representative*
+..........
+*parameters*
+@RepID     type  int
+@PersonID  type  int 
+...........
+
+******************************************************************
+
+*Add_Visit*
+..........
+*Create new Visit object *
+..........
+*parameters*
+@Date      type  date
+@V_index   type  int
+@Priority  type  varchar(1)
+@PatientID type  int 
+...........
+
+******************************************************************
+
+*Update_Visit*
+..........
+*Update data of Visit *
+..........
+*parameters*
+
+@ID        type  int 
+@Date      type  date
+@V_index   type  int
+@Priority  type  varchar(1)
+@PatientID type  int 
+...........
+
+******************************************************************
+
+*DisplayVisit*
+..........
+*display all data of Visit *
+..........
+*parameters*
+NONE 
+...........
+
+******************************************************************
+
+*Add_Diagnose*
+..........
+*Create new Diagnose object*
+..........
+*parameters*
+@Description  type nvarchar(200)
+@VisitID      type int 
+...........
+
+******************************************************************
+
+*Update_Diagnose*
+..........
+*Update data of Diagnose object*
+..........
+*parameters*
+@ID           type  int 
+@Description  type  nvarchar(200)
+@VisitID      type  int
+...........
+
+******************************************************************
+
+*Add_Symptoms*
+..........
+*Create  new Diagnose object*
+..........
+*parameters*
+@Description type nvarchar(200)
+@VisitID     type int
+...........
+
+******************************************************************
+
+*Update_Symptoms*
+..........
+*Update data of Symptoms object*
+..........
+*parameters*
+@ID           type  int 
+@Description  type  nvarchar(200)
+@VisitID      type  int
+...........
+
+******************************************************************
+
+*Add_Treatment*
+..........
+*Create new Treatment object*
+..........
+*parameters*
+@Description  type  nvarchar(200)
+@VisitID      type  int
+...........
+
+******************************************************************
+
+*Update_Treatment*
+..........
+*Update data of Treatment object*
+..........
+*parameters*
+@ID           type  int 
+@Description  type  nvarchar(200)
+@VisitID      type  int
+...........
+
+******************************************************************
+
+*Add_Billing*
+..........
+*Create new  Billing object*
+..........
+*parameters*
+@Cost         type  int
+@VisitID      type  int
+...........
+
+******************************************************************
+
+*Update_Billing*
+..........
+*Update data of Diagnose object*
+..........
+*parameters*
+@ID           type  int 
+@Cost         type  int
+@VisitID      type  int
+...........
+
+******************************************************************
+
+*Add_SYMItem*
+..........
+*Create new SYMItem object*
+..........
+*parameters*
+@Name         type  nvarchar(50)
+@Description  type  nvarchar(100)
+...........
+
+******************************************************************
+
+*Update_SYSItem*
+..........
+*Update data of SYMItem object*
+..........
+*parameters*
+@ID           type  int
+@Name         type  nvarchar(50)
+@Description  type  nvarchar(100)
+...........
+
+******************************************************************
+
+*Add_TreatItem*
+..........
+*Create new TreatItem object*
+..........
+*parameters*
+@Name         type  nvarchar(50)
+@Description  type  nvarchar(100)
+@RepID        type  int
+...........
+
+******************************************************************
+
+*Search_TreatItem*
+..........
+*Search for SYMItem object*
+..........
+*parameters*
+@ID    type  int
+...........
+
+******************************************************************
+
+*Update_TreatItem*
+..........
+*update data of TreatItem object*
+..........
+*parameters*
+@ID           type  int
+@Name         type  nvarchar(50)
+@Description  type  nvarchar(100)
+@RepID        type  int
+...........
+
+******************************************************************
+
+*Add_DiagItem*
+..........
+*Create new DiagItem object*
+..........
+*parameters*
+@Name         type  nvarchar(50)
+@Description  type  nvarchar(100)
+...........
+
+******************************************************************
+
+*Search_DiagItem*
+..........
+*Search for DiagItem object*
+..........
+*parameters*
+@ID    type  int
+...........
+
+******************************************************************
+
+*Update_DiagItem*
+..........
+*update data of DiagItem object*
+..........
+*parameters*
+@ID           type  int
+@Name         type  nvarchar(50)
+@Description  type  nvarchar(100)
+...........
+
+******************************************************************
+
+*Add_BillingItem*
+..........
+*Create new BillingItem object*
+..........
+*parameters*
+@Name         type  nvarchar(50)
+@Description  type  nvarchar(100)
+@Cost         type  int
+...........
+
+******************************************************************
+
+*Search_BillingItem*
+..........
+*Search for BillingItem object*
+..........
+*parameters*
+@ID    type  int
+...........
+
+******************************************************************
+
+*Update_BillingItem*
+..........
+*update data of BillingItem object*
+..........
+*parameters*
+@ID           type  int
+@Name         type  nvarchar(50)
+@Description  type  nvarchar(100)
+@Cost         type  int
+...........
+
+******************************************************************
+
+*Add_SysAssociation*
+..........
+*Create new SysAssociation object*
+..........
+*parameters*
+@SymID      type  int 
+@SysItemID  type  int 
+...........
+
+******************************************************************
+
+*Delete_SysAssociation*
+..........
+*delete SysAssociation object*
+..........
+*parameters*
+@SysID    type  int
+...........
+
+******************************************************************
+
+*Add_DiagAssociation*
+..........
+*Create new DiagAssociation object*
+..........
+*parameters*
+@DiagID      type  int 
+@DiagItemID  type  int 
+...........
+
+******************************************************************
+
+*Delete_DiagAssociation*
+..........
+*delete DiagAssociation object*
+..........
+*parameters*
+@DiagID    type  int
+...........
+
+******************************************************************
+
+*Add_TreatAssociation*
+..........
+*Create new TreatAssociation object*
+..........
+*parameters*
+@TreamID      type  int 
+@TreatItemID  type  int 
+...........
+
+******************************************************************
+
+*Delete_TreatAssociation*
+..........
+*delete TreatAssociation object*
+..........
+*parameters*
+@TreamID    type  int
+...........
+
+******************************************************************
+
+*Add_BillAssociation*
+..........
+*Create new BillAssociation object*
+..........
+*parameters*
+@BillID      type  int 
+@BillItemID  type  int 
+...........
+
+******************************************************************
+
+*Delete_BillAssociation*
+..........
+*delete BillAssociation object*
+..........
+*parameters*
+@BillID    type  int
+...........
+
+******************************************************************
+
+*Add_PAYInfo*
+..........
+*Create new PAYInfo object *
+..........
+*parameters*
+@CardNumber type  int
+@ExpDate    type  date 
+@Security   type  int 
+@PatientID  type  int
+...........
+
+******************************************************************
+
+*Search_Patient*
+..........
+*Search for Patient *
+..........
+*parameters*
+@ID   type  int
+...........
+output All information about this Person
+
+******************************************************************
+
+*Update_PAYInfo*
+..........
+*update date of this PAYInfo *
+..........
+*parameters*
+@PAYID       type  int 
+@CardNumber  type  int
+@ExpDate     type  date 
+@Security    type  int 
+@PatientID   type  int
+...........
+
+******************************************************************
+
+*PatientInfo*
+..........
+*get all information of data visit , Treatment Description , diagnose Description ,  *
+..........
+*parameters*
+NONE
+...........
+
+
+******************************************************************
+
+*First20Visit*
+..........
+*get first 20    V_Date , V_Index ,V_Priority ,P_Name,P_AdmissionDate,P_Phone,P_ZipCode,P_Email,P_Image,P_SSN,P_ZipCode,P_city *
+..........
+*parameters*
+NONE
+...........
+******************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+

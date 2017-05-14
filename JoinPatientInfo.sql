@@ -1,0 +1,48 @@
+--select s_name,d_name
+--from tbl_students 
+--Inner join tbl_depts
+--on s_dept=d_id
+--Add_Visit '2001-2-2' , 1 , 'B' , 1 , 1
+
+--create proc First20Visit
+--as
+--SELECT top 20 
+--v.V_Date , v.V_Index ,v.V_Priority ,p.P_Name,p.P_AdmissionDate,p.P_Phone,p.P_ZipCode,p.P_Email,p.P_Image,p.P_SSN,p.P_ZipCode,p.P_city
+--FROM dbo.Visit v inner join dbo.Patient pa
+--on
+--v.V_PatientID = pa.PA_PatientID and v.V_Check = 1
+--inner join  dbo.Person p 
+--on pa.PA_PersonID = p.P_PersonID 
+--ORDER BY v.V_Date ASC
+
+--create proc Last10Visit4Patient
+--@ID int
+--as
+--SELECT top 20
+--v.V_Date , v.V_Index ,v.V_Priority , p.P_AdmissionDate , p.P_SSN
+--FROM dbo.Visit v inner join dbo.Patient pa
+--on
+--v.V_PatientID = pa.PA_PatientID and v.V_Check = 1
+--inner join  dbo.Person p 
+--on pa.PA_PersonID = p.P_PersonID
+--where v.V_PatientID = @ID
+--ORDER BY v.V_Date Desc
+
+--create proc PatientInfo
+--as
+--SELECT
+--p.P_Name , v.V_Date , di.D_Name,di.D_Description ,tr.T_Name ,tr.T_Description ,sy.S_Name ,sy.S_Description , b.B_Cost
+--FROM dbo.Person p inner join dbo.Patient pa
+--on
+--p.P_PersonID = pa.PA_PersonID
+--inner join dbo.Visit v
+--on pa.PA_PatientID = v.V_PatientID
+--inner join dbo.Diagnose di
+--on v.V_VisitID = di.D_VisitID
+--inner join dbo.Treatment tr
+--on v.V_VisitID = tr.T_Visit
+--inner join dbo.Symptoms sy
+--on v.V_VisitID = sy.S_VisitID 
+--inner join dbo.Billing b
+--on v.V_VisitID = b.B_VisitID
+
