@@ -558,6 +558,103 @@ NONE
 ...........
 ******************************************************************
 
+*searchPatientbyPersonName*
+..........
+*get all info about Paitent by his name *
+..........
+*parameters*
+@Name
+...........
+******************************************************************
+
+*search_Sym_item_byName*
+..........
+*get all info about SymItems by it name *
+..........
+*parameters*
+@Name
+...........
+******************************************************************
+
+
+*search_treat_item_byName*
+..........
+*get all info about TreatItem by it name *
+..........
+*parameters*
+@Name
+...........
+******************************************************************
+
+
+*search_dia_item_byName*
+..........
+*get all info about DiagItem by it name *
+..........
+*parameters*
+@Name
+...........
+******************************************************************
+
+*search_bill_item_byName*
+..........
+*get all info about BillItem by it name *
+..........
+*parameters*
+@Name
+...........
+******************************************************************
+
+
+*searchPatientbyPersonID*
+..........
+*get all info about Paitent by his ID *
+..........
+*parameters*
+@ID
+...........
+******************************************************************
+
+*search_Sym_item_byID*
+..........
+*get all info about SymItems by it ID *
+..........
+*parameters*
+@ID
+...........
+******************************************************************
+
+
+*search_treat_item_byID*
+..........
+*get all info about TreatItem by it ID *
+..........
+*parameters*
+@ID
+...........
+******************************************************************
+
+
+*search_dia_item_byID*
+..........
+*get all info about DiagItem by it ID *
+..........
+*parameters*
+@ID
+...........
+******************************************************************
+
+*search_bill_item_byID*
+..........
+*get all info about BillItem by it ID *
+..........
+*parameters*
+@Name
+...........
+******************************************************************
+
+
+
 
 
 
